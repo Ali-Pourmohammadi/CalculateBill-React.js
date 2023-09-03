@@ -1,4 +1,3 @@
-// import App from "./App"
-export default function Button({children , onClick}){
-    return (<button className="button" onClick={onClick}>{children}</button>)
-}
+export default function Button({children , onOpen}){
+    return(<button onClick={onOpen} className="button">{children}</button>)
+};
