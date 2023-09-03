@@ -1,9 +1,10 @@
-import data from "../data"
+
 import Friend from "./Friend"
-export default function FriendList(){
+export default function FriendList({friend}){
+   
     return(<ul>
         {
-        data.map(friend=><Friend friend ={friend} key={friend.id}/>)
+        friend.map(friend=><Friend friend ={friend} key={friend.id}/>)
         }
     </ul>)
 }
