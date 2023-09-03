@@ -9,8 +9,9 @@ export default function AddFriendForm({onAddFriend}){
         const id = crypto.randomUUID();
         const newFriend = {name , balance:0 , image  , id};
         onAddFriend(newFriend);
-
     }
+    
+    
     return(<div>
         <form className="form-add-friend" onSubmit={handlSubmit}>
             <label htmlFor="">👩🏻‍🤝‍👩🏻 Friend Name</label>

@@ -1,10 +1,10 @@
 
 import Friend from "./Friend"
-export default function FriendList({friend}){
+export default function FriendList({friend , onSelection , selectFriend}){
    
     return(<ul>
         {
-        friend.map(friend=><Friend friend ={friend} key={friend.id}/>)
+        friend.map(friend=><Friend friend ={friend} key={friend.id} handleSelection = {onSelection} selectFriend = {selectFriend}/>)
         }
     </ul>)
 }
