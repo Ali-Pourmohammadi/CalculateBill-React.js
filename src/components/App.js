@@ -18,6 +18,12 @@ export default function App(){
     function handleSelection(friend){
         setSelectFriend(selectFriend=> selectFriend?.id === friend.id ? null : friend);
     }
+    function handleValue(value){
+        // console.log(value);
+        setFriend(friend=>friend.map(friend=>friend.id === selectFriend.id ? {...friend , balance : friend.balance + value}:friend));
+        setSelectFriend(null);
+
+    }
 
   return(<div className="app">
     <div className="sidebar">
@@ -25,6 +31,6 @@ export default function App(){
         {isOpen &&<AddFriendList onAddFriend = {hanldAddFriend}/>}
         <Button onClick = {handlIsOpen}>{isOpen ? "Close" : "Add SomeOne"}</Button>
     </div>
-    {selectFriend&&<BillForm selectedFriend ={selectFriend}/>}
+    {selectFriend&&<BillForm handleValue = {handleValue} selectedFriend ={selectFriend}/>}
   </div>)
 }
