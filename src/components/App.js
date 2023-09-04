@@ -19,7 +19,6 @@ export default function App(){
         setSelectFriend(selectFriend=> selectFriend?.id === friend.id ? null : friend);
     }
     function handleValue(value){
-        // console.log(value);
         setFriend(friend=>friend.map(friend=>friend.id === selectFriend.id ? {...friend , balance : friend.balance + value}:friend));
         setSelectFriend(null);
 
