@@ -1,1 +1,2 @@
-## Calculate Bill 
+## Calculate Bill
+## using Reat.js
